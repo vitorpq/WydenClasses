@@ -6,7 +6,7 @@
 """
 
 import sys
-from pwdlibs import lerArquivo, checkUser, AddUser
+from pwdlibs import lerArquivo, checkUser, AddUser, UpdateUser
 
 if len(sys.argv) == 1:
     arquivo = "password.txt"
@@ -28,9 +28,10 @@ if len(sys.argv) == 1:
             usuario = input("Usuário já existe!\nFavor utilizar outro: ")
         if not checkUser(dados, usuario):
             AddUser(arquivo, usuario)
+            print("Usuário adicionado com sucesso!")
 
     # --- Update User ---
     elif comando == "update":
         # pede nome do usuário e valida se ele existe
         usuario = input("Nome de usuário: ")
-        AddUser(arquivo, usuario)
+        UpdateUser(dados, usuario)

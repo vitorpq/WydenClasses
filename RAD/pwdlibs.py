@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 # -*- utf-8 -*-
+import os
+import hashlib
 
 
 def lerArquivo(arquivo):
-    with open(arquivo, "r+") as f:
+    with open(arquivo, "rb") as f:
         dados = []
         for linha in f.readlines():
+            linha = linha.decode('utf-8')
             nome = linha.strip("\n").split(":")[0]
             senha = linha.strip("\n").split(":")[1]
             dados.append([nome, senha])
@@ -31,9 +34,13 @@ def checkPass(dados, usuario, senha):
 
     matches = [x for x in dados if x[0] == usuario]
 
-    if senha in matches[0]:
-        return True
+    salt_salvo = matches[0][1][:32]
+    chave_salva = matches[0][1][32:]
 
+    salt, chave = hashSenha(senha, salt_salvo)
+
+    if chave == chave_salva:
+        return True
     else:
         print("Senha não confere")
         return False
@@ -47,7 +54,10 @@ def AddUser(arquivo, usuario):
             senha_2 = input("Repita a mesma senha: ")
             while senha_2 != senha_1:
                 senha_2 = input("Senha não confere.\nRepita a mesma senha: ")
-            f.writelines([usuario+":"+senha_1+"\n"])
+            
+            salt, chave = hashSenha(senha_1)
+            storage = salt.hex() + chave.hex()
+            f.write(f'{usuario}:{storage}\n')
     except Exception as erro:
         print(erro)
 
@@ -72,3 +82,16 @@ def UpdateUser(dados, usuario):
                 print("Senha atualizada com sucesso!")
     else:
         print("usuário não existe")
+
+
+#%% Password Hashing
+def hashSenha(senha, *args):
+
+    if args:
+        salt = args[0]
+        chave = hashlib.pbkdf2_hmac('sha256', senha.encode('UTF-8'), salt, 100_000)
+    else:
+        salt = os.urandom(32)
+        chave = hashlib.pbkdf2_hmac('sha256', senha.encode('UTF-8'), salt, 100_000)
+
+    return salt, chave
