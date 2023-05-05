@@ -5,23 +5,19 @@ import hashlib
 import os
 
 
-sal = os.urandom(32)
+# Para salvar usar o sal, devemos transformar ele em uma string Hexadecinmal
+# depois converter para byte
+# 
+sal = os.urandom(32).hex().encode('utf-8')
 
-senha = b'25'
+senha = b'20'
 
 chave = hashlib.pbkdf2_hmac('sha256', senha, sal, 100000)
 
-chave_salva = chave.hex()
-
-sal_salvo = sal.hex()
-
-print("Sal: ", sal_salvo)
-print('Senha: ', chave_salva)
-
-usuario = 'vitor'
+usuario = 'daniel'
 
 with open('senhas.txt', 'w') as f:
-	f.write(usuario+':'+sal_salvo+chave_salva+'\n')
+	f.write(usuario+':'+sal.decode('utf-8')+chave.hex()+'\n')
 
 
 
