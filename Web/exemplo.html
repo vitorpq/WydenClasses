@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset='utf-8'>
+	<style>
+		body {
+		  width: 70%;
+		  overflow: hidden;
+		}
+
+		section {
+		  position: relative;
+		  display: block;
+		  left: calc(50%);
+		}
+		/* set `div` container `background` to last `div img` `src` */
+		div {
+		  display: inline-block;
+		  position: relative;
+		  height: 200px;
+		  width: 200px;
+		  background: url(http://lorempixel.com/100/100/cats);
+		  border: 0.1em outset black;
+		}
+		/* set `img` `opacity:0`  */
+		div img {
+		  position: absolute;
+		  transition: all 500ms ease-in-out;
+		  -moz-transition: all 500ms ease-in-out;
+		  -webkit-transition: all 500ms ease-in-out;
+		  -o-transition: all 500ms ease-in-out;
+		  -ms-transition: all 500ms ease-in-out;
+		  opacity: 0;
+		}
+		/* 
+		   display `:target` `img` on click of `a`,
+		   having `img` as fragment identifier 
+		*/
+		div img:target {
+		  opacity: 1;
+		  animation: active 1s ease-in-out 0s normal 1 both;
+		  -moz-animation: active 1s ease-in-out 0s normal 1 both;
+		  -webkit-animation: active 1s ease-in-out 0s normal 1 both;
+		}
+		/* `.thumbs` `span` elements */
+		.thumbs {
+		  height: 50px;
+		  width: 50px;
+		  padding: 1px;
+		  display: inline-block;
+		  position: relative;
+		  text-align: center;
+		  border: 0.1em inset black;
+		  border-radius: 50px;
+		  font-size: 1em;
+		}
+		/* set `background` of `.thumbs` `span` elements  */
+		[href="#3"] .thumbs {
+		  background: url(http://lorempixel.com/100/100/cats);
+		  background-size: 100%;
+		  background-repeat: no-repeat;
+		}
+
+		[href="#2"] .thumbs {
+		  background: url(http://lorempixel.com/100/100/animals);
+		  background-size: 100%;
+		  background-repeat: no-repeat;
+		}
+
+		[href="#1"] .thumbs {
+		  background: url(http://lorempixel.com/100/100/technics);
+		  background-size: 100%;
+		  background-repeat: no-repeat;
+		}
+
+		[href="#0"] .thumbs {
+		  background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP._yw9cGG6FaDHOjHdTbeU1AHaJQ%26pid%3DApi&f=1&ipt=24962eac603ed8c197dde97a3c5a51008d3b2c7f4a00a9dbb5b58cafe4d0b40e&ipo=images);
+		  background-size: 100%;
+		  background-repeat: no-repeat;
+		}
+
+		span:hover {
+		  border-top: 0.1em solid gold;
+		  border-left: 0.1em solid yellow;
+		  border-bottom: 0.1em solid orange;
+		  border-right: 0.1em solid goldenrod;
+		  box-shadow: 0 0 0 0.125em sienna, 0 0 0 0.225em dodgerblue;
+		}
+
+		a {
+		  top: 30%;
+		  text-decoration: none;
+		  display: inline-block;
+		  position: relative;
+		  color: transparent;
+		}
+
+		nav a {
+		  left: -16px;
+		}
+
+		@keyframes active {
+		  0% {
+			box-shadow: 0 0 0 0.125em dodgerblue, 0 0 0 0.25em yellow;
+		  }
+		  100% {
+			box-shadow: none;
+		  }
+		}
+
+		@-webkit-keyframes active {
+		  0% {
+			box-shadow: 0 0 0 0.125em dodgerblue, 0 0 0 0.25em yellow;
+		  }
+		  100% {
+			box-shadow: none;
+		  }
+		}
+
+		@-moz-keyframes active {
+		  0% {
+			box-shadow: 0 0 0 0.125em dodgerblue, 0 0 0 0.25em yellow;
+		  }
+		  100% {
+			box-shadow: none;
+		  }
+		}
+
+		
+	</style>
+	
+	<!-- <link rel="stylesheet" href="estilo.css">-->
+	
+	<!--
+		<div class="header"> </div>
+		
+		<div class="header"> </div>
+		
+		<div id="header"> </div>
+		
+		
+		<header></header>
+		<main></main>
+		<section></section>
+		<article></article>
+		<aside></aside>
+		
+	
+	
+	-->
+	
+	
+	<title>Página de Exemplo</title>
+	
+	</head>
+	<body>
+		<div class="topo">
+			<h1>Título da Página</h1>
+		
+		</div>
+		<div class="postagem">
+				<h2>Texto Principal</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio lacus, ornare sed nunc sed, blandit imperdiet sapien. Aenean sed risus a neque aliquam rhoncus. Nulla facilisi. Suspendisse sit amet tortor justo. Ut consequat neque vitae augue ultrices, vel laoreet nisl venenatis. Nulla vel fermentum dolor. Sed rutrum mauris eu vestibulum sagittis. Fusce tincidunt feugiat nunc, a consequat felis pretium a. Etiam in turpis dui. Nunc venenatis, velit in tincidunt laoreet, est lorem ultricies nisi, vitae fermentum lectus velit sit amet erat. Sed elementum ligula id tempus semper. Nam malesuada, tortor a rhoncus tincidunt, urna est luctus neque, vitae bibendum lectus velit vel velit. Nunc et ante blandit, mollis mi aliquam, fermentum sem. Sed cursus tortor nec mi tincidunt gravida. Vestibulum tristique auctor placerat. Fusce rhoncus leo in purus sagittis semper vestibulum vitae nisi.
+				</p>
+				
+					<blockquote>
+					<p>
+					Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec consectetur efficitur turpis, vitae feugiat dui. In massa magna, sagittis id orci et, tempor fermentum nibh. Nullam sit amet nibh erat. Nam a purus nunc. Ut facilisis turpis eleifend, lacinia neque sit amet, elementum diam. Proin blandit hendrerit mi, nec maximus lacus gravida a. Ut ornare commodo quam ut porttitor. Etiam finibus dolor sit amet enim commodo faucibus. Integer enim felis, facilisis in tellus vitae, feugiat rutrum lacus. Integer scelerisque elementum ipsum, in commodo quam ornare eu. Proin eu augue velit. Mauris commodo leo ligula, quis imperdiet lectus porta id. Nam tristique iaculis purus tempor molestie. Curabitur semper dolor nec semper elementum.
+					</p>
+					</blockquote>
+				
+				<p>
+					Proin tristique sapien felis, laoreet rutrum felis venenatis vel. Donec in consectetur dolor. Curabitur ut pretium justo. Morbi rhoncus quis augue eu euismod. Mauris quam risus, facilisis ut sem in, tristique pulvinar turpis. Donec posuere sit amet arcu non laoreet. Quisque luctus, enim pulvinar rutrum accumsan, mauris velit mattis tortor, sit amet pretium magna erat nec nisl.
+				</p>	
+		</div>
+		<div class="propaganda">
+				<h2>Texto Secundário</h2>
+				<p>
+					<b>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus dapibus tortor, eu venenatis purus sagittis eget. In pellentesque massa et vulputate porta. Donec leo eros, interdum a venenatis ac, pulvinar eget risus. Nunc ut arcu mollis, commodo felis eu, viverra felis. Vivamus porta iaculis est sed suscipit. Quisque tempus in mauris in mollis. Aenean maximus massa vel quam consequat iaculis. Sed fringilla placerat condimentum. Phasellus ac condimentum leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies feugiat congue. Morbi ex enim, consequat non lectus ac, aliquam sollicitudin tortor. Morbi mattis eros et nulla vestibulum molestie. Etiam varius metus orci, sit amet mattis dolor elementum a.
+					</b>
+				</p>
+				<hr>
+				<p> x<sup>2</sup>  </p>
+				<code>
+				<p>
+					Suspendisse imperdiet magna augue, in commodo lacus consectetur a. Mauris imperdiet elit quis elit dictum, ac consectetur risus pharetra. Nullam porta sed tellus ac finibus. Integer molestie porta mauris, vel imperdiet ligula tincidunt eget. Phasellus est quam, euismod quis finibus nec, suscipit eget lacus. Sed id sem blandit, hendrerit enim vitae, posuere purus. Nam iaculis purus vel justo sollicitudin, ut placerat odio convallis. Nam faucibus rhoncus odio, quis euismod mauris condimentum id. Proin ut turpis non magna imperdiet gravida eu ac neque. Vestibulum at turpis quis odio consectetur porta. In finibus neque sed tortor rhoncus laoreet. Nullam mi eros, ultrices eget interdum sed, interdum ut neque. Phasellus eget facilisis magna, feugiat viverra elit. Curabitur eleifend elementum massa, facilisis dignissim nisi tristique non. Cras quis eros et justo varius vulputate. Nam vitae ex vitae sapien suscipit auctor volutpat non
+				</p>
+				</code>
+		</div>
+		
+		<div class="rodape">
+					<form action="action.php" method="post">
+						<label>Your name:</label>
+						<input type="text" name="name" />
+						<label>Your age: </label>
+						<input type="text" name="age" />
+						<p><input type="submit" /></p>
+					</form>
+
+				<a href="http://vitor.one" target="_blank"><img src="https://m.media-amazon.com/images/I/61QKhYL+eCL.png" width="20%"></a>
+				
+				<p>
+				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fprofessordoiphone.com.br%2Fwp-content%2Fuploads%2F2019%2F12%2FIMG_9938.jpg&f=1&nofb=1&ipt=0490840c3b068bc9beebad946cd1cd2c1eeac367edc1049bec25a1108eefeec6&ipo=images" width="50%">
+				</p>
+				<p>
+				<img id="imagens" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgracedecoracoes.com.br%2Fwp-content%2Fuploads%2F2019%2F09%2Fpapel-de-parede3.jpg&f=1&nofb=1&ipt=4efeb10518b947847cb92786ac1abb84659beb1a9a6388dba78432edf525ba92&ipo=images" width="50%">
+				</p>
+				
+				
+				<ul>
+					<li>Item 1</li>
+					<li>Item 1</li>
+				
+				</ul>
+					
+				<ol>
+					<li>Item 1</li>
+					<li>Item 1</li>
+				</ol>
+				
+	</div>
+	
+	
+	<section>
+			  <div>
+				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP._yw9cGG6FaDHOjHdTbeU1AHaJQ%26pid%3DApi&f=1&ipt=24962eac603ed8c197dde97a3c5a51008d3b2c7f4a00a9dbb5b58cafe4d0b40e&ipo=images" id="0" width="200" height="200"/>
+				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.MBlOJPg-beF5E6q2yR5k9gHaLH%26pid%3DApi&f=1&ipt=a17420dc31247f3c4b590dedc1f3174b60c5caba26a351dd8924362fc8134c12&ipo=images" id="1" width="200" height="200"/>
+				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP._929W-twSt3yNx_Hd0gBnQHaE7%26pid%3DApi&f=1&ipt=07a40fe3821a28c03e200cefc53f82776e9b990004ad6f2527ea2a6cbc9b896a&ipo=images" id="2" width="200" height="200"/>
+				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ZVsREj_CBJKQuNP9kUKkHgHaJZ%26pid%3DApi&f=1&ipt=18bbde5949957f3e450f1d3ce3334bc678eb6ea243c6576d716e02f0b2bb7095&ipo=images" id="3" width="200" height="200"/>
+			  </div>
+			  <nav>
+				<a href="#3">
+				  <span class="thumbs">  
+				  </span>
+				</a>
+				<a href="#2">
+				  <span class="thumbs">  
+				   </span>
+				</a>
+				<a href="#1">
+				  <span class="thumbs">  
+				  </span>
+				</a>
+				<a href="#0">
+				  <span class="thumbs">  
+				  </span>
+				</a>
+			  </nav>
+</section>
+	</body>
+</html>
