@@ -44,9 +44,8 @@ public static void main(String args[]) {
 		System.out.println(t1.getState());
 		System.out.println(t2.getState());
 		
-		t1.join();
-		t2.join();
-            try {
+		
+        try {
                 t1.join();
                 System.out.println(t1.getState());
 				System.out.println(t2.getState());
