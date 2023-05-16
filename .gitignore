@@ -1,3 +1,4 @@
 /OOP/ThreadsForDummies/target/
 /OOP/Contador/target/
 .*
+!/.gitignore
