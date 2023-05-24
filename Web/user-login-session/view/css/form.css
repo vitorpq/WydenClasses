@@ -1,0 +1,46 @@
+input, textarea, select {
+	box-sizing: border-box;
+	width: 200px;
+	height: initial;
+	padding: 8px 5px;
+	border: 1px solid #9a9a9a;
+	border-radius: 4px;
+}
+
+input[type="checkbox"] {
+	width: auto;
+	vertical-align: text-bottom;
+}
+
+textarea {
+	width: 300px;
+}
+
+select {
+	display: initial;
+	height: 30px;
+	padding: 2px 5px;
+}
+
+button, input[type=submit], input[type=button] {
+	padding: 8px 20px;
+	font-size: 1em;
+	cursor: pointer;
+	border-radius: 25px;
+	color: #000000;
+	background-color: #ffc72c;
+	border-color: #ffd98e #ffbe3d #de9300;
+}
+
+input[type=submit]:hover {
+	background-color: #f7c027;
+}
+
+::placeholder {
+	color: #bdbfc4;
+}
+
+label {
+	display: block;
+	color: #565656;
+}

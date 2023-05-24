@@ -1,0 +1,148 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI,
+		Helvetica Neue, Helvetica, Arial, sans-serif;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	color: #2f2f2f;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: #2f20d1;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.phppot-container {
+	width: 740px;
+	margin: 20px auto;
+	padding: 0px 20px 0px 20px;
+}
+
+.row {
+	padding: 6px 0 6px 0;
+}
+
+.label {
+	color: #565656;
+	margin-bottom: 2px;
+}
+
+.card {
+	padding: 1rem 2rem;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px #747681;
+}
+
+.message {
+	padding: 6px 20px;
+	font-size: 1em;
+	color: rgb(40, 40, 40);
+	box-sizing: border-box;
+	margin: 0px;
+	border-radius: 3px;
+	width: 100%;
+	overflow: auto;
+}
+
+.error {
+	padding: 6px 20px;
+	border-radius: 3px;
+	background-color: #ffe7e7;
+	border: 1px solid #e46b66;
+	color: #dc0d24;
+}
+
+.success {
+	background-color: #48e0a4;
+	border: #40cc94 1px solid;
+	border-radius: 3px;
+	color: #105b3d;
+}
+
+.validation-message {
+	color: #e20900;
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
+.display-none {
+	display: none;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.mr-20 {
+	margin-right: 20px;
+}
+
+.m-20 {
+	margin: 20px;
+}
+
+.tile-container {
+	width: 240px;
+	border: #9a9a9a 1px solid;
+	border-radius: 3px;
+	padding: 10px 20px 10px 20px;
+}
+
+@media all and (max-width: 780px) {
+	.phppot-container {
+		width: auto;
+	}
+}
+
+@media all and (max-width: 400px) {
+	.phppot-container {
+		padding: 0px 20px;
+	}
+	.tile-container {
+		width: auto;
+	}
+	input, textarea, select {
+		width: 100%;
+	}
+}
