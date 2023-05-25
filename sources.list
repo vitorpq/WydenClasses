@@ -1,0 +1,72 @@
+#------------------------------------------------------------------------------#
+#                   OFFICIAL DEBIAN REPOS                    
+#------------------------------------------------------------------------------#
+
+###### Debian Main Repos
+deb http://archive.debian.org/debian/ stretch stable main contrib non-free
+# deb-src http://archive.debian.org/debian/ stable main contrib non-free
+
+deb http://archive.debian.org/debian/ stretch stable-updates main contrib non-free
+# deb-src http://archive.debian.org/debian/ stable-updates main contrib non-free
+
+deb http://archive.debian.org/debian-security stretch updates
+#deb http://archive.debian.org/debian-security updates main
+# deb-src http://archive.debian.org/debian-security stable/updates main
+
+### -----------------------------
+###Repositório (stretch) Base ###
+### -----------------------------
+deb http://archive.debian.org/debian/ stretch main contrib non-free
+# deb-src http://archive.debian.org/debian/ stretch main contrib non-free
+
+### -----------------------------
+###Repositório (stretch) security.debian.org/ ###
+### -----------------------------
+deb http://archive.debian.org/debian-security/ stretch updates
+# deb-src http://archive.debian.org/debian-security/ stretch/updates main contrib non-free
+
+### -----------------------------
+###Repositório (stretch) stretch-updates ###
+### -----------------------------
+deb http://archive.debian.org/debian/ stretch updates main contrib non-free
+# deb-src http://archive.debian.org/debian/ stretch-updates main contrib non-free
+
+### -----------------------------
+###Repositório (stretch) proposed-updates###
+### -----------------------------
+deb http://archive.debian.org/debian/ stretch-proposed-updates main contrib non-free
+# deb-src http://archive.debian.org/debian/ stretch-proposed-updates main contrib non-free
+
+### -----------------------------
+###Repositório (stretch) stretch-backports ###
+### -----------------------------
+deb http://archive.debian.org/debian stretch-backports main
+
+#------------------------------------------------------------------------------#
+#                      UNOFFICIAL  REPOS                       
+#------------------------------------------------------------------------------#
+
+### ------------------------
+### Google Chrome Browser
+### ------------------------
+deb http://dl.google.com/linux/chrome/deb/ stable main
+
+### -----------------------------
+### Java Oracle - Duinsoft.nl.
+### -----------------------------
+### Chave GPG: sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 5CB26B26
+
+### ---------------------------------
+### Firefox, Thunderbird e Seamonkey
+### ---------------------------------
+### sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com C1289A29
+
+### --------------------
+### Banco de Dados - MariaDB
+### --------------------
+# deb http://www.ftp.saix.net/DB/mariadb/repo/10.1/debian stretch main
+
+### --------------------
+### Docker
+### --------------------
+# deb-src [arch=amd64] https://download.docker.com/linux/debian stretch edge
