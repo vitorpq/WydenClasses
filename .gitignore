@@ -2,3 +2,6 @@
 /OOP/Contador/target/
 .*
 !/.gitignore
+/Disciplina-IoT/Material
+.env
+/Disciplina-IoT/src/.venv
