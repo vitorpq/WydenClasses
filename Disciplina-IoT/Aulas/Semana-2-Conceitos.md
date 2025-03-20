@@ -26,7 +26,7 @@
 
 
 📌 Exemplo de requisição POST em Python:
-
+```python
 import requests
 
 url = "https://meuservidor.com/dados"
@@ -34,7 +34,7 @@ dados = {"temperatura": 25.5, "umidade": 60}
 
 response = requests.post(url, json=dados)
 print(response.text)
-
+```
 📌 Referência: [HTTP Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods)
 
 ⸻
