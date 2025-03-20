@@ -1,28 +1,39 @@
-# Complete project details at https://RandomNerdTutorials.com
+import network
+import urequests
+import time
+import random
 
-from machine import Pin, I2C
-from time import sleep
-import BME280
+# Configuração do Wi-Fi
+SSID = "Visitantes"  # Substitua pelo seu SSID
+PASSWORD = "Wy@2023.2"  # Substitua pela sua senha
 
-# ESP32 - Pin assignment
-#i2c = I2C(scl=Pin(22), sda=Pin(21), freq=10000)
-# ESP8266 - Pin assignment
-i2c = I2C(scl=Pin(5), sda=Pin(4), freq=10000)
+wifi = network.WLAN(network.STA_IF)
+wifi.active(True)
+wifi.connect(SSID, PASSWORD)
 
+while not wifi.isconnected():
+    time.sleep(1)
+
+print("Wi-Fi conectado:", wifi.ifconfig())
+
+# URL do servidor Flask (certifique-se de que o Localtunnel esteja rodando e esta URL esteja correta)
+SERVER_URL = "http://172.16.6.142:3000/dados"  # Substitua pela URL fornecida pelo Localtunnel
+
+# Função para gerar dados simulados
+def gerar_dados():
+    return {
+        "temperatura": round(random.uniform(20, 30), 2),
+        "umidade": round(random.uniform(40, 70), 2)
+    }
+
+# Loop para enviar dados
 while True:
-  bme = BME280.BME280(i2c=i2c)
-  temp = bme.temperature
-  hum = bme.humidity
-  pres = bme.pressure
-  # uncomment for temperature in Fahrenheit
-  #temp = (bme.read_temperature()/100) * (9/5) + 32
-  #temp = str(round(temp, 2)) + 'F'
-  alt = 44330 * (1 - ((bme.read_pressure/25600) / 1013.25)**0.1903)  # altitude em metros
-  
-  print('Temperature: ', temp)
-  print('Humidity: ', hum)
-  print('Pressure: ', pres)
-  print('Altitude: ', alt)
-  
+    dados = gerar_dados()
+    try:
+        response = urequests.post(SERVER_URL, json=dados)
+        print("Resposta do servidor:", response.text)
+        response.close()  # É importante fechar a resposta para liberar recursos
+    except Exception as e:
+        print("Erro ao enviar:", e)
 
-  sleep(5)
+    time.sleep(5)
