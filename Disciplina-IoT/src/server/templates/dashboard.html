@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard de Sensores</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+    </style>
+    <meta http-equiv="refresh" content="5; url=/dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Dados Recebidos</h1>
+    <table>
+        <tr>
+            <th>Grupo</th>
+            <th>Tipo de Sensor</th>
+            <th>Valor</th>
+            <th>Última Atualização</th>
+        </tr>
+        {% for group_id, data in groups.items() %}
+        <tr>
+            <td>{{ group_id }}</td>
+            <td>{{ data.data.sensor_type }}</td>
+            <td>{{ data.data.value }}</td>
+            <td>{{ data.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

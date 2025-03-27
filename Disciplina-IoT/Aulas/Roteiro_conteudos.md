@@ -6,7 +6,7 @@
 |--------|-----------------------------------------|-------------------------------------------------------------------|-------------------------------------|
 | 1.     | Introdução à IoT                        | Conceitos, aplicações e configuração inicial do NodeMCU           | NodeMCU, MicroPython                |
 | 2.     | Protocolos de Comunicação (HTTP e MQTT) | Envio de dados simulados via HTTP (Flask) e MQTT (Mosquitto)      | Flask (Google Colab), MQTT (HiveMQ) |
-| 3.     | Leitura de Dados do Sensor (BME280)     | Captura de temperatura, umidade e pressão e envio para o servidor | BME280, HTTP/MQTT                   |
+| 3.     | Leitura de Dados do Sensor     | Captura de temperatura, umidade e pressão e envio para o servidor | HTTP/MQTT                   |
 | 4.     | Armazenamento e Visualização de Dados   | Salvar dados no Google Sheets e visualizar com Grafana            | Google Sheets API, Grafana          |
 | 5.     | Automação e Tomada de Decisão           | Criar alertas automáticos baseados em valores do sensor           | Telegram Bot API, Webhooks          |
 | 6.     | Integração com Nuvem                    | Envio de dados para Firebase ou ThingsBoard                       | Firebase, ThingsBoard               |

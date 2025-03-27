@@ -1,0 +1,21 @@
+{
+  "groups": {
+    "grupo2": {
+      "data": {
+        "group_id": "grupo2",
+        "sensor_type": "humidity",
+        "value": 60
+      },
+      "timestamp": "2025-03-27T18:44:37.566894"
+    },
+    "grupo1": {
+      "data": {
+        "group_id": "grupo1",
+        "sensor_type": "temperature",
+        "value": 60
+      },
+      "timestamp": "2025-03-27T18:45:36.100998"
+    }
+  },
+  "last_updated": "2025-03-27T18:45:36.100998"
+}
