@@ -1,5 +1,3 @@
----
-
 ### **1. Estrutura do Servidor Flask**
 
 #### **Arquivo: `server.py`**
