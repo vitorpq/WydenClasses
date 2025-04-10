@@ -1,6 +1,3 @@
-Vamos criar um servidor Flask simples para receber dados dos NodeMCUs dos alunos via HTTP.
-Este servidor permitirá que os alunos enviem dados de seus sensores e verifiquem se a conexão está funcionando corretamente.
-
 ---
 
 ### **1. Estrutura do Servidor Flask**
@@ -267,7 +264,7 @@ print(response.json())
 ### **8. Problemas Comuns**
 
 1. **CORS (Cross-Origin Resource Sharing)**:
-   Adicione o cabeçalho `Access-Control-Allow-Origin` se os alunos testarem de navegadores:
+   Adicione o cabeçalho `Access-Control-Allow-Origin` se testar de navegadores:
    ```python
    from flask_cors import CORS
    CORS(app)
@@ -278,13 +275,6 @@ print(response.json())
    - Use `ping` e `telnet` para testar a conectividade.
 
 3. **Formato JSON Incorreto**:
-   Garanta que os alunos estejam enviando cabeçalhos `Content-Type: application/json`.
+   Garanta que o código esteja enviando cabeçalhos `Content-Type: application/json`.
 
 ---
-
-Com este sistema, os alunos poderão:
-- Enviar dados de sensores via HTTP.
-- Verificar se seus dados chegaram ao servidor.
-- Comparar resultados com outros grupos no dashboard. 
-
-Quer ajustar algo ou adicionar funcionalidades específicas? 😊
