@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard de Sensores</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        th { background-color: #4CAF50; color: white; }
+        .timestamp { color: #666; font-size: 0.9em; }
+        .last-update { text-align: right; color: #666; font-size: 0.9em; }
+        .header { display: flex; justify-content: space-between; align-items: center; }
+        .refresh-button { 
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .refresh-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10">
+</head>
+<body>
+    <div class="header">
+        <h1>Dados dos Sensores</h1>
+    
+    </div>
+    
+    <table>
+        <tr>
+            <th>Timestamp</th>
+            <th>Grupo ID</th>
+            <th>Sensor</th>
+            <th>Valor</th>
+        </tr>
+        {% for timestamp, data in timestamps.items()|sort(reverse=true) %}
+        <tr>
+            <td class="timestamp">{{ timestamp }}</td>
+            <td>{{ data.group_id }}</td>
+            <td>{{ data.data.sensor_type }}</td>
+            <td>{{ data.data.value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <p class="last-update">Última atualização: {{ last_updated if last_updated else 'Nenhum dado recebido ainda' }}</p>
+</body>
+</html>

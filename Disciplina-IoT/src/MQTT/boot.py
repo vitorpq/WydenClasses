@@ -1,8 +1,8 @@
 import network
 import time
 # Configuração do Wi-Fi
-SSID = "Visitantes"
-PASSWORD = "Wy@2023.2"
+SSID = "MiniTooth"
+PASSWORD = "hfr230211619"
 
 wifi = network.WLAN(network.STA_IF)
 wifi.active(True)

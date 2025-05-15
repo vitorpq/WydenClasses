@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API de Sensores - Instruções</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        pre { background-color: #f5f5f5; padding: 15px; border-radius: 5px; }
+        code { background-color: #f5f5f5; padding: 2px 5px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo à API de Sensores!</h1>
+    <p>Envie dados do NodeMCU via POST para <code>/api/data</code> com o JSON:</p>
+    <pre>
+{
+    "group_id": "grupo1",
+    "sensor_type": "temperature",
+    "value": 25.5
+}
+    </pre>
+    <p>Os dados serão armazenados com timestamp automático e podem ser consultados por:</p>
+    <ul>
+        <li>Grupo: <code>GET /api/data/{group_id}</code></li>
+        <li>Visualização completa: <a href="/dashboard">Dashboard</a></li>
+    </ul>
+    <p>Última atualização: {{ last_updated if last_updated else 'Nenhum dado recebido ainda' }}</p>
+</body>
+</html>

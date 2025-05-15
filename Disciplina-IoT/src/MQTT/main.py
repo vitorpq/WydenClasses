@@ -20,8 +20,9 @@ PASSWORD = "Wy@2023.2"
 # Configuração do MQTT
 BROKER = "172.16.6.142"
 PORTA = 1883
-TOPICO = "iot/nodemcu"
-CLIENTE_ID = "NodeMCU"
+TOPICO = "iot/nodemcu1" 
+TOPICO = "iot/nodemcu2" 
+CLIENTE_ID = "NodeMCU" # Grupo01
 
 mqtt = MQTTClient(CLIENTE_ID, BROKER, PORTA)
 mqtt.connect()
@@ -30,12 +31,7 @@ mqtt.connect()
 def gerar_dados():
     # return '{"temperatura": ' + str(round(random.uniform(20, 30), 2)) + ', "umidade": ' + str(round(random.uniform(40, 70), 2)) + '}'
     return json.dumps({"temperatura": "10", "umidade": "20"})
-# Loop para publicar os dados
-# while True:
-#     dados = gerar_dados()
-#     mqtt.publish(TOPICO, dados)
-#     print("Dados enviados via MQTT:", dados)
-#     time.sleep(5)
+
 
 while True:
     try:

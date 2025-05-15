@@ -44,26 +44,34 @@ def index():
 def receive_data():
     try:
         data = request.get_json()
-        
-        if not data or 'group_id' not in data or 'sensor_type' not in data:
+
+        if not data or 'group_id' not in data or 'sensor_type' not in data or 'value' not in data:
             return jsonify({"error": "Dados inválidos"}), 400
-        
+
         group_id = data['group_id']
+        sensor_type = data['sensor_type']
+        value = data['value']
         timestamp = datetime.now().isoformat()
-        
+
         with data_lock:
-            # Atualizar dados na memória
-            data_store["groups"][group_id] = {
-                "data": data,
-                "timestamp": timestamp
+            # Criar chave se não existir
+            if "log" not in data_store:
+                data_store["log"] = {}
+
+            # Salvar com timestamp como chave
+            data_store["log"][timestamp] = {
+                "group_id": group_id,
+                "data": {
+                    "sensor_type": sensor_type,
+                    "value": value
+                }
             }
+
             data_store["last_updated"] = timestamp
-            
-            # Persistir no arquivo
             save_data_to_file(data_store)
-        
+
         return jsonify({"status": "Dados recebidos!"}), 200
-    
+
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
@@ -79,9 +87,10 @@ def get_data(group_id):
 @app.route('/dashboard')
 def dashboard():
     with data_lock:
-        return render_template('dashboard.html', 
-                           groups=data_store["groups"],
-                           last_updated=data_store["last_updated"])
+        timestamps = data_store.get("log", {})
+        return render_template('dashboard.html',
+                               timestamps=timestamps,
+                               last_updated=data_store.get("last_updated"))
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=PORT, debug=DEBUG)

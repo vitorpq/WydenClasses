@@ -1,0 +1,252 @@
+{
+  "timestamps": {
+    "2025-04-03T15:27:28.406330": {
+      "data": {
+        "sensor_type": "temperature",
+        "group_id": "Teacher",
+        "value": "100"
+      },
+      "group_id": "Teacher"
+    },
+    "2025-04-03T15:27:33.522324": {
+      "data": {
+        "sensor_type": "temperature",
+        "group_id": "Teacher",
+        "value": "100"
+      },
+      "group_id": "Teacher"
+    },
+    "2025-04-03T15:27:38.643833": {
+      "data": {
+        "sensor_type": "temperature",
+        "group_id": "Teacher",
+        "value": "100"
+      },
+      "group_id": "Teacher"
+    },
+    "2025-04-03T15:27:43.727359": {
+      "data": {
+        "sensor_type": "temperature",
+        "group_id": "Teacher",
+        "value": "100"
+      },
+      "group_id": "Teacher"
+    },
+    "2025-04-03T15:27:48.890425": {
+      "data": {
+        "sensor_type": "temperature",
+        "group_id": "Teacher",
+        "value": "100"
+      },
+      "group_id": "Teacher"
+    },
+    "2025-04-03T15:27:53.964182": {
+      "data": {
+        "sensor_type": "temperature",
+        "group_id": "Teacher",
+        "value": "100"
+      },
+      "group_id": "Teacher"
+    },
+    "2025-04-03T15:27:59.048559": {
+      "data": {
+        "sensor_type": "temperature",
+        "group_id": "Teacher",
+        "value": "100"
+      },
+      "group_id": "Teacher"
+    }
+  },
+  "last_updated": "2025-04-03T20:57:19.807127",
+  "log": {
+    "2025-04-03T16:23:34.400509": {
+      "group_id": "teste",
+      "data": {
+        "sensor_type": "altitude",
+        "value": 42
+      }
+    },
+    "2025-04-03T16:26:22.282629": {
+      "group_id": "teste",
+      "data": {
+        "sensor_type": "altitude",
+        "value": 42
+      }
+    },
+    "2025-04-03T16:30:08.922147": {
+      "group_id": "teste",
+      "data": {
+        "sensor_type": "altitude",
+        "value": 42
+      }
+    },
+    "2025-04-03T16:30:10.812533": {
+      "group_id": "teste",
+      "data": {
+        "sensor_type": "altitude",
+        "value": 42
+      }
+    },
+    "2025-04-03T16:30:12.094957": {
+      "group_id": "teste",
+      "data": {
+        "sensor_type": "altitude",
+        "value": 42
+      }
+    },
+    "2025-04-03T16:30:13.113140": {
+      "group_id": "teste",
+      "data": {
+        "sensor_type": "altitude",
+        "value": 42
+      }
+    },
+    "2025-04-03T16:33:50.816620": {
+      "group_id": "Teacher",
+      "data": {
+        "sensor_type": "temperature",
+        "value": "100"
+      }
+    },
+    "2025-04-03T16:38:52.488283": {
+      "group_id": "Teacher",
+      "data": {
+        "sensor_type": "temperature",
+        "value": "100"
+      }
+    },
+    "2025-04-03T19:40:46.033460": {
+      "group_id": "vitor",
+      "data": {
+        "sensor_type": "temperatura",
+        "value": 58.2
+      }
+    },
+    "2025-04-03T19:58:46.242976": {
+      "group_id": "grupo_2",
+      "data": {
+        "sensor_type": "pressao_e_temperatura",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:15:26.113290": {
+      "group_id": "grupo_2",
+      "data": {
+        "sensor_type": "pressao_e_temperatura",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:15:53.345241": {
+      "group_id": "Grupo4",
+      "data": {
+        "sensor_type": "temperatura e umidade",
+        "value": 25.5
+      }
+    },
+    "2025-04-03T20:15:58.443306": {
+      "group_id": "Grupo4",
+      "data": {
+        "sensor_type": "temperatura e umidade",
+        "value": 25.5
+      }
+    },
+    "2025-04-03T20:16:03.559583": {
+      "group_id": "Grupo4",
+      "data": {
+        "sensor_type": "temperatura e umidade",
+        "value": 25.5
+      }
+    },
+    "2025-04-03T20:16:08.669287": {
+      "group_id": "Grupo4",
+      "data": {
+        "sensor_type": "temperatura e umidade",
+        "value": 25.5
+      }
+    },
+    "2025-04-03T20:16:13.764825": {
+      "group_id": "Grupo4",
+      "data": {
+        "sensor_type": "temperatura e umidade",
+        "value": 25.5
+      }
+    },
+    "2025-04-03T20:56:28.042523": {
+      "group_id": "grupo2",
+      "data": {
+        "sensor_type": "temperature",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:56:33.164499": {
+      "group_id": "grupo2",
+      "data": {
+        "sensor_type": "temperature",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:56:38.279844": {
+      "group_id": "grupo2",
+      "data": {
+        "sensor_type": "temperature",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:56:43.364340": {
+      "group_id": "grupo2",
+      "data": {
+        "sensor_type": "temperature",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:56:48.473548": {
+      "group_id": "grupo2",
+      "data": {
+        "sensor_type": "temperature",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:56:53.582538": {
+      "group_id": "grupo2",
+      "data": {
+        "sensor_type": "temperature",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:56:58.679921": {
+      "group_id": "grupo2",
+      "data": {
+        "sensor_type": "temperature",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:57:04.030757": {
+      "group_id": "grupo2",
+      "data": {
+        "sensor_type": "temperature",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:57:09.539069": {
+      "group_id": "grupo2",
+      "data": {
+        "sensor_type": "temperature",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:57:14.642364": {
+      "group_id": "grupo2",
+      "data": {
+        "sensor_type": "temperature",
+        "value": 30
+      }
+    },
+    "2025-04-03T20:57:19.807127": {
+      "group_id": "grupo2",
+      "data": {
+        "sensor_type": "temperature",
+        "value": 30
+      }
+    }
+  }
+}

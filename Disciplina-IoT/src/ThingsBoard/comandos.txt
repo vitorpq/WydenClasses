@@ -1,0 +1,19 @@
+mosquitto_pub -d -q 1 -h mqtt.thingsboard.cloud -p 1883 -t v1/devices/me/telemetry -u "yogK6fl2HqKw28mntVb4" -m "{temperature:25}"
+curl -v POST http://thingsboard.cloud/api/v1/yogK6fl2HqKw28mntVb4/telemetry --header Content-Type:application/json --data "{temperature:25}"
+
+Grupo 01
+IquDWALl8BVA1d2YeBNb
+
+Grupo 02
+Yb5z4jh2cB1cHtoe0i4R
+
+Grupo 03
+NpB4Kefxg2TPKoVZrqb9
+
+Grupo 04
+6uFCykKKT2wGkbQX68G3
+
+Grupo 05
+
+
+
