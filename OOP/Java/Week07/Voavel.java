@@ -1,0 +1,3 @@
+interface Voavel {
+    void voar();
+}

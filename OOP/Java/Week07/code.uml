@@ -1,0 +1,46 @@
+@startuml
+start
+
+:Main Program (GameOfLife);
+:Parse Command Line Arguments;
+
+if (Arguments valid?) then (Yes)
+    :Create GameOfLife Object;
+    :Initialize Grid from User Input;
+    -> Grid: Create Grid Object;
+    -> Grid: Initialize Grid with User Input;
+
+    while (Generations > 0) is (Yes)
+        :Print Current Grid;
+        -> Grid: Print Grid;
+        
+        :Invoke nextGeneration Method;
+        -> Grid: nextGeneration();
+
+        :For Each Cell in Grid;
+        loop Check All 8 Neighbors
+            -> Grid: Count Alive Neighbors;
+            if (Neighbor is Alive?) then (Yes)
+                :Increase Alive Neighbor Count;
+            endif
+        end
+
+        if (Cell is Alive?) then (Yes)
+            if (Alive Neighbors < 2 or > 3?) then (Yes)
+                :Cell Dies (Underpopulation/Overpopulation);
+            else (No)
+                :Cell Remains Alive (Optimal Conditions);
+            endif
+        else (Cell is Dead)
+            if (Alive Neighbors == 3?) then (Yes)
+                :Cell Becomes Alive (Reproduction);
+            endif
+        endif
+
+        :Update Grid with New State;
+
+        :Sleep for Specified Time (s milliseconds);
+        -- Main Loop Ends --
+
+        :Decrement Generations Counter;
+    endwhile (Gener​⬤
